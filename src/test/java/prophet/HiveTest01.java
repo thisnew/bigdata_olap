@@ -11,7 +11,7 @@ public class HiveTest01 {
 	public static void main(String[] args) {
 		try {
 			Class.forName(driverName);
-			Connection con = DriverManager.getConnection("jdbc:hive2://XX.XX.XX.XX:10000/default", "root", "");
+			Connection con = DriverManager.getConnection("jdbc:hive2://172.16.1.68:10000/default", "hdfs", "");
 			Statement stmt = con.createStatement();
 	        String sql = "SHOW TABLES";
 	        System.out.println("Running: " + sql);

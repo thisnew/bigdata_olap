@@ -8,7 +8,7 @@
 * VUE + iview
 
 ## 准备工作
-* 搭建hadoop集群、hive集群(强烈推荐hive-server2-2.x版本)、metastore
+* 搭建hadoop集群、hive集群(兼容hive-server2-1.x和2.x版本，需要如下修改pom.xml)、metastore
 * 搭建prophet会用到的mysql，推荐mysql 5.6及以上版本
 
 ## 安装步骤
@@ -73,6 +73,16 @@ server {
     * 如果配置了LDAP：则填写LDAP账号，prophet内置用户系统不生效。
     * 如果配置了prophet内置用户系统：则默认初始化管理账号为admin1，密码为admin1
 * 8.开始使用吧！
+
+## hive版本切换
+* 如果想在hive 1.x和2.x之间切换，需要修改pom.xml里的hive-jdbc的version和具体hive版本一致即可：
+```javascript
+	<dependency>
+      <groupId>org.apache.hive</groupId>
+      <artifactId>hive-jdbc</artifactId>
+      <version>1.1.0</version>
+	...
+```
 
 ## 系统截图
 * 1.登录页面
