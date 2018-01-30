@@ -37,7 +37,7 @@ upstream prophet{
 server {
     listen  80;
     server_name prophet.xxx.com;
-
+    
     gzip    on;
     gzip_min_length 1k;
     gzip_proxied    expired no-cache no-store private auth;
@@ -81,7 +81,7 @@ server {
       <groupId>org.apache.hive</groupId>
       <artifactId>hive-jdbc</artifactId>
       <version>1.1.0</version>
-	...
+	....
 ```
 
 ## 系统截图
